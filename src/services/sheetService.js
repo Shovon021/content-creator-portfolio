@@ -3,7 +3,7 @@ import { initialProjects } from '../data/portfolioData';
 // Permanent Google Sheet published CSV URL
 export const DEFAULT_SHEET_CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQRbRtO-wz9r1jq5LKa6Ce_RnqKE3klDActaR0aSo7KPPhdUFADBl5cwJEUHarvuQLBvR2_hVnXThi1/pub?output=csv';
 
-const LOCAL_STORAGE_CACHE_KEY = 'dear_ekra_sheet_projects_cache';
+const LOCAL_STORAGE_CACHE_KEY = 'dear_ekra_sheet_projects_v2';
 const CACHE_TTL_MS = 60 * 1000; // 1 minute fresh cache before background revalidation
 
 /**
