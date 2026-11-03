@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Plus, X, Trash2, Eye, ExternalLink, Check, Copy, AlertCircle, ArrowLeft } from 'lucide-react';
+import { Plus, X, Trash2, Eye, ExternalLink, Check, Copy, AlertCircle, ArrowLeft, Lock } from 'lucide-react';
 import { getGoogleSheetUrl, setGoogleSheetUrl } from '../services/sheetService';
 
 const CATEGORY_OPTIONS = [
@@ -14,6 +14,28 @@ export default function AdminPWA({ isOpen, onClose, projects, onAddProject, onDe
   const [view, setView] = useState('list'); // 'list' | 'new'
   const [isPublished, setIsPublished] = useState(false);
   
+  // Security PIN state (Default PIN: 2026)
+  const ADMIN_PIN = '2026';
+  const [pinInput, setPinInput] = useState('');
+  const [isUnlocked, setIsUnlocked] = useState(() => {
+    if (typeof window !== 'undefined') {
+      return sessionStorage.getItem('dear_ekra_admin_auth') === 'true';
+    }
+    return false;
+  });
+  const [pinError, setPinError] = useState(false);
+
+  const handleUnlockPin = (e) => {
+    e.preventDefault();
+    if (pinInput.trim() === ADMIN_PIN) {
+      setIsUnlocked(true);
+      sessionStorage.setItem('dear_ekra_admin_auth', 'true');
+      setPinError(false);
+    } else {
+      setPinError(true);
+    }
+  };
+
   // New Post Form State
   const [category, setCategory] = useState('beauty');
   const [fbLink, setFbLink] = useState('');
@@ -37,6 +59,46 @@ export default function AdminPWA({ isOpen, onClose, projects, onAddProject, onDe
   };
 
   if (!isOpen) return null;
+
+  if (!isUnlocked) {
+    return (
+      <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-fadeIn">
+        <div className="w-full max-w-sm bg-white rounded-2xl shadow-2xl p-6 border border-zinc-100 text-center">
+          <div className="w-12 h-12 mx-auto mb-3 rounded-full bg-pink-50 flex items-center justify-center text-pink-600">
+            <Lock className="w-6 h-6" />
+          </div>
+          <h3 className="text-lg font-serif font-bold text-zinc-900 mb-1">Developer & Admin Access</h3>
+          <p className="text-xs text-zinc-500 mb-4">Enter secret PIN to access the manager</p>
+          <form onSubmit={handleUnlockPin} className="space-y-3">
+            <input
+              type="password"
+              autoFocus
+              value={pinInput}
+              onChange={(e) => { setPinInput(e.target.value); setPinError(false); }}
+              placeholder="Enter PIN (e.g. 2026)"
+              className={`w-full px-4 py-2.5 text-center text-sm font-mono tracking-widest rounded-xl border ${pinError ? 'border-red-500 bg-red-50/50' : 'border-zinc-200'} focus:outline-none focus:ring-2 focus:ring-pink-500/20`}
+            />
+            {pinError && <p className="text-xs text-red-500 font-medium">Incorrect PIN. Try again.</p>}
+            <div className="flex gap-2">
+              <button
+                type="button"
+                onClick={onClose}
+                className="w-1/2 py-2 text-xs font-medium text-zinc-600 bg-zinc-100 hover:bg-zinc-200 rounded-xl transition-colors cursor-pointer"
+              >
+                Cancel
+              </button>
+              <button
+                type="submit"
+                className="w-1/2 py-2 text-xs font-medium text-white bg-zinc-900 hover:bg-zinc-800 rounded-xl transition-colors cursor-pointer shadow-sm"
+              >
+                Unlock
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    );
+  }
 
   const handlePaste = async () => {
     try {

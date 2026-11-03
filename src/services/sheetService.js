@@ -6,15 +6,18 @@ const LOCAL_STORAGE_SHEET_KEY = 'dear_ekra_google_sheet_url';
 const LOCAL_STORAGE_CACHE_KEY = 'dear_ekra_sheet_projects_cache';
 const CACHE_TTL_MS = 60 * 1000; // 1 minute fresh cache before background revalidation
 
+// Permanent Google Sheet published CSV URL
+export const DEFAULT_SHEET_CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQRbRtO-wz9r1jq5LKa6Ce_RnqKE3klDActaR0aSo7KPPhdUFADBl5cwJEUHarvuQLBvR2_hVnXThi1/pub?output=csv';
+
 /**
- * Get the active Google Sheet CSV URL (Environment variable or Admin setting)
+ * Get the active Google Sheet CSV URL (Environment variable or Admin setting or default)
  */
 export function getGoogleSheetUrl() {
   if (typeof window !== 'undefined') {
     const saved = localStorage.getItem(LOCAL_STORAGE_SHEET_KEY);
     if (saved) return saved.trim();
   }
-  return import.meta.env.VITE_GOOGLE_SHEET_CSV_URL || '';
+  return import.meta.env.VITE_GOOGLE_SHEET_CSV_URL || DEFAULT_SHEET_CSV_URL;
 }
 
 /**
@@ -93,22 +96,24 @@ export function parseCSV(text) {
       continue;
     }
 
-    // Normalize types
+    // Normalize types and merge with bundled data if available
+    const foundInitial = initialProjects.find(p => p.id === obj.id);
     rows.push({
       id: obj.id || `sheet-${i}`,
-      brand: obj.brand || 'Dear Ekra',
-      category: (obj.category || 'other').toLowerCase().trim(),
-      categoryLabel: obj.categorylabel || obj.category || '',
-      headline: obj.headline || '',
-      title: obj.headline || obj.title || obj.brand,
-      videoUrl: obj.videourl || '',
-      localVideoUrl: obj.localvideourl || '',
-      videoThumbnail: obj.videothumbnail || obj.thumbnail || '/thumbnails/intro_video.webp',
-      brandLogo: obj.brandlogo || '/logos/dear_ekra_default.jpg',
-      viewCount: obj.viewcount || '',
-      location: obj.location || 'Dhaka, Bangladesh',
-      featured: String(obj.featured).toUpperCase() === 'TRUE',
-      story: obj.story || '',
+      brand: obj.brand || (foundInitial ? foundInitial.brand : 'Dear Ekra'),
+      category: (obj.category || (foundInitial ? foundInitial.category : 'other')).toLowerCase().trim(),
+      categoryLabel: obj.categorylabel || (foundInitial ? foundInitial.categoryLabel : '') || obj.category || '',
+      headline: obj.headline || (foundInitial ? foundInitial.headline : ''),
+      title: obj.headline || obj.title || obj.brand || (foundInitial ? foundInitial.title : 'Dear Ekra'),
+      videoUrl: obj.videourl || (foundInitial ? foundInitial.videoUrl : ''),
+      localVideoUrl: obj.localvideourl || (foundInitial ? foundInitial.localVideoUrl : ''),
+      previewSrc: foundInitial?.previewSrc || '',
+      videoThumbnail: obj.videothumbnail || obj.thumbnail || (foundInitial ? foundInitial.videoThumbnail : '/thumbnails/intro_video.webp'),
+      brandLogo: obj.brandlogo || (foundInitial ? foundInitial.brandLogo : '/logos/dear_ekra_default.jpg'),
+      viewCount: obj.viewcount || (foundInitial ? foundInitial.viewCount : ''),
+      location: obj.location || (foundInitial ? foundInitial.location : 'Dhaka, Bangladesh'),
+      featured: obj.featured !== undefined ? String(obj.featured).toUpperCase() === 'TRUE' : (foundInitial ? foundInitial.featured : false),
+      story: obj.story || (foundInitial ? foundInitial.story : ''),
       aspect: 'vertical'
     });
   }
