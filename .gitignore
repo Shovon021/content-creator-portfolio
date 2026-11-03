@@ -40,3 +40,7 @@ Thumbs.db
 dist.zip
 dist_clean/
 
+
+scripts/
+scratch/
+
