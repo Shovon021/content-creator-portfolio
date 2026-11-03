@@ -69,27 +69,50 @@ export function parseCSV(text) {
       obj[h] = values[index] !== undefined ? values[index] : '';
     });
 
-    // Skip inactive rows
-    if (obj.active && obj.active.toUpperCase() === 'FALSE') {
+    // Flexible field extraction (support short simple sheets)
+    const brand = obj.brand || obj.brandname || obj.client || obj.name || '';
+    if (!brand && !obj.id) continue; // Skip completely empty rows
+
+    // Skip inactive rows (defaults to active if blank)
+    const activeVal = String(obj.active || '').toUpperCase();
+    if (activeVal === 'FALSE' || activeVal === 'NO' || activeVal === '0') {
       continue;
     }
 
-    // Normalize types and merge with bundled data if available
-    const foundInitial = initialProjects.find(p => p.id === obj.id);
+    // Match with bundled initial project by id OR brand name
+    const foundInitial = initialProjects.find(p => 
+      (obj.id && p.id === obj.id) || 
+      (brand && p.brand.toLowerCase().trim() === brand.toLowerCase().trim())
+    );
+
+    const logo = obj.brandlogo || obj.logo || obj.logourl || obj.image || (foundInitial ? foundInitial.brandLogo : '');
+    const video = obj.videourl || obj.video || obj.link || obj.reellink || obj.url || (foundInitial ? foundInitial.videoUrl : '');
+    const headline = obj.headline || obj.title || obj.caption || (foundInitial ? foundInitial.headline : '');
+    const views = obj.viewcount || obj.views || obj.reach || (foundInitial ? foundInitial.viewCount : '');
+    const location = obj.location || (foundInitial ? foundInitial.location : 'Dhaka, Bangladesh');
+
+    // Auto-detect brand-only logo: if no video and no headline provided, it's a logo-only partner
+    let category = (obj.category || obj.type || (foundInitial ? foundInitial.category : '') || 'other').toLowerCase().trim();
+    if (!video && !headline && logo) {
+      category = 'brand-only';
+    }
+
+    const categoryLabel = obj.categorylabel || (foundInitial ? foundInitial.categoryLabel : '') || category;
+
     rows.push({
-      id: obj.id || `sheet-${i}`,
-      brand: obj.brand || (foundInitial ? foundInitial.brand : 'Dear Ekra'),
-      category: (obj.category || (foundInitial ? foundInitial.category : 'other')).toLowerCase().trim(),
-      categoryLabel: obj.categorylabel || (foundInitial ? foundInitial.categoryLabel : '') || obj.category || '',
-      headline: obj.headline || (foundInitial ? foundInitial.headline : ''),
-      title: obj.headline || obj.title || obj.brand || (foundInitial ? foundInitial.title : 'Dear Ekra'),
-      videoUrl: obj.videourl || (foundInitial ? foundInitial.videoUrl : ''),
+      id: obj.id || foundInitial?.id || `brand-${brand.toLowerCase().replace(/[^a-z0-9]/g, '-') || i}`,
+      brand: brand || 'Dear Ekra',
+      category: category,
+      categoryLabel: categoryLabel,
+      headline: headline || (category === 'brand-only' ? '' : `${brand} Collaboration`),
+      title: headline || brand || 'Dear Ekra',
+      videoUrl: video,
       localVideoUrl: obj.localvideourl || (foundInitial ? foundInitial.localVideoUrl : ''),
       previewSrc: foundInitial?.previewSrc || '',
       videoThumbnail: obj.videothumbnail || obj.thumbnail || (foundInitial ? foundInitial.videoThumbnail : '/thumbnails/intro_video.webp'),
-      brandLogo: obj.brandlogo || (foundInitial ? foundInitial.brandLogo : '/logos/dear_ekra_default.jpg'),
-      viewCount: obj.viewcount || (foundInitial ? foundInitial.viewCount : ''),
-      location: obj.location || (foundInitial ? foundInitial.location : 'Dhaka, Bangladesh'),
+      brandLogo: logo || '/logos/dear_ekra_default.jpg',
+      viewCount: views,
+      location: location,
       featured: obj.featured !== undefined ? String(obj.featured).toUpperCase() === 'TRUE' : (foundInitial ? foundInitial.featured : false),
       story: obj.story || (foundInitial ? foundInitial.story : ''),
       aspect: 'vertical'
