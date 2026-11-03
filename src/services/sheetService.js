@@ -1,38 +1,16 @@
 import { initialProjects } from '../data/portfolioData';
 
-// Configurable Google Sheet published CSV URL
-// Can be provided via Vite env or localStorage (via #admin)
-const LOCAL_STORAGE_SHEET_KEY = 'dear_ekra_google_sheet_url';
-const LOCAL_STORAGE_CACHE_KEY = 'dear_ekra_sheet_projects_cache';
-const CACHE_TTL_MS = 60 * 1000; // 1 minute fresh cache before background revalidation
-
 // Permanent Google Sheet published CSV URL
 export const DEFAULT_SHEET_CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQRbRtO-wz9r1jq5LKa6Ce_RnqKE3klDActaR0aSo7KPPhdUFADBl5cwJEUHarvuQLBvR2_hVnXThi1/pub?output=csv';
 
-/**
- * Get the active Google Sheet CSV URL (Environment variable or Admin setting or default)
- */
-export function getGoogleSheetUrl() {
-  if (typeof window !== 'undefined') {
-    const saved = localStorage.getItem(LOCAL_STORAGE_SHEET_KEY);
-    if (saved) return saved.trim();
-  }
-  return import.meta.env.VITE_GOOGLE_SHEET_CSV_URL || DEFAULT_SHEET_CSV_URL;
-}
+const LOCAL_STORAGE_CACHE_KEY = 'dear_ekra_sheet_projects_cache';
+const CACHE_TTL_MS = 60 * 1000; // 1 minute fresh cache before background revalidation
 
 /**
- * Save a new Google Sheet CSV URL from the Admin panel
+ * Get the active Google Sheet CSV URL (Environment variable or default)
  */
-export function setGoogleSheetUrl(url) {
-  if (typeof window !== 'undefined') {
-    if (url) {
-      localStorage.setItem(LOCAL_STORAGE_SHEET_KEY, url.trim());
-      localStorage.removeItem(LOCAL_STORAGE_CACHE_KEY); // Invalidate cache
-    } else {
-      localStorage.removeItem(LOCAL_STORAGE_SHEET_KEY);
-      localStorage.removeItem(LOCAL_STORAGE_CACHE_KEY);
-    }
-  }
+export function getGoogleSheetUrl() {
+  return import.meta.env.VITE_GOOGLE_SHEET_CSV_URL || DEFAULT_SHEET_CSV_URL;
 }
 
 /**

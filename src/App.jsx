@@ -13,44 +13,10 @@ const WhatSheDoes = lazy(() => import('./components/WhatSheDoes'));
 const BrandFeedback = lazy(() => import('./components/BrandFeedback'));
 const CollaborateSection = lazy(() => import('./components/CollaborateSection'));
 const Footer = lazy(() => import('./components/Footer'));
-const AdminPWA = lazy(() => import('./components/AdminPWA'));
 const VideoModal = lazy(() => import('./components/VideoModal'));
 
 export default function App() {
-  const [projects, setProjects] = useState(() => {
-    try {
-      localStorage.removeItem('dear_ekra_projects_v4');
-      localStorage.removeItem('dear_ekra_projects_v5');
-      localStorage.removeItem('dear_ekra_projects_v6');
-      localStorage.removeItem('dear_ekra_projects_v7');
-      localStorage.removeItem('dear_ekra_projects_v8');
-      localStorage.removeItem('dear_ekra_projects_v9');
-      localStorage.removeItem('dear_ekra_projects_v10');
-      localStorage.removeItem('dear_ekra_projects_v11');
-      localStorage.removeItem('dear_ekra_projects_v12');
-      localStorage.removeItem('dear_ekra_projects_v13');
-      localStorage.removeItem('dear_ekra_projects_v14');
-      const saved = localStorage.getItem('dear_ekra_projects_v15');
-      if (saved) {
-        const parsed = JSON.parse(saved);
-        return initialProjects.map(init => {
-          const savedItem = parsed.find(p => p.id === init.id);
-          return savedItem ? { ...init, ...savedItem, localVideoUrl: init.localVideoUrl } : init;
-        });
-      }
-    } catch (e) {
-      console.warn('Failed to parse saved projects:', e);
-    }
-    return initialProjects;
-  });
-
-  const [isAdminOpen, setIsAdminOpen] = useState(() => {
-    if (typeof window !== 'undefined') {
-      const params = new URLSearchParams(window.location.search);
-      return params.get('admin') === 'true' || window.location.hash === '#admin';
-    }
-    return false;
-  });
+  const [projects, setProjects] = useState(initialProjects);
   const [selectedLookIndex, setSelectedLookIndex] = useState(0);
 
   // Auto-change looks one-by-one continuously every 11 seconds (11000ms)
@@ -120,18 +86,6 @@ export default function App() {
     return () => document.removeEventListener('visibilitychange', handleVisibility);
   }, []);
 
-  useEffect(() => {
-    localStorage.setItem('dear_ekra_projects_v15', JSON.stringify(projects));
-  }, [projects]);
-
-  const handleAddProject = (newProject) => {
-    setProjects([newProject, ...projects]);
-  };
-
-  const handleDeleteProject = (id) => {
-    setProjects(projects.filter(p => p.id !== id));
-  };
-
   const scrollToCollab = () => {
     const elem = document.getElementById('contact');
     if (elem) {
@@ -198,7 +152,6 @@ export default function App() {
       <Suspense fallback={null}>
         <Footer
           onOpenCollab={scrollToCollab}
-          onOpenAdmin={() => setIsAdminOpen(true)}
           activeLook={currentLook}
         />
 
@@ -211,15 +164,6 @@ export default function App() {
           }}
           video={theaterReel ? theaterReel.reel : activeVideo}
           initialTime={theaterReel ? theaterReel.currentTime : 0}
-        />
-
-        {/* Creator Admin Hub (PWA Drawer) */}
-        <AdminPWA
-          isOpen={isAdminOpen}
-          onClose={() => setIsAdminOpen(false)}
-          projects={projects}
-          onAddProject={handleAddProject}
-          onDeleteProject={handleDeleteProject}
         />
       </Suspense>
 
