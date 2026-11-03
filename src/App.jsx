@@ -121,6 +121,7 @@ export default function App() {
           onPlayVideo={(video) => setActiveVideo(video)}
           activeLookIndex={selectedLookIndex}
           onSelectLookIndex={setSelectedLookIndex}
+          projects={projects}
         />
 
         {/* All below-the-fold sections: lazy-loaded, zero impact on FCP/LCP */}

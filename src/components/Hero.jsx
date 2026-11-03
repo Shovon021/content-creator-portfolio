@@ -3,9 +3,34 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { clientLogos, portraitLooks } from '../data/portfolioData';
 import TypewriterSpecialty from './TypewriterSpecialty';
 
-export default function Hero({ onOpenCollab, activeLookIndex = 0, onSelectLookIndex }) {
+export default function Hero({ onOpenCollab, activeLookIndex = 0, onSelectLookIndex, projects = [] }) {
   const currentIndex = activeLookIndex;
   const activeLook = portraitLooks[currentIndex] || portraitLooks[0];
+
+  // Dynamically merge base logos with any new brand logos added in Google Sheets
+  const displayLogos = React.useMemo(() => {
+    const list = [...clientLogos];
+    if (Array.isArray(projects) && projects.length > 0) {
+      projects.forEach((p) => {
+        if (!p.brand) return;
+        const brandName = p.brand.trim();
+        const existing = list.find(l => l.name?.toLowerCase().trim() === brandName.toLowerCase());
+        const logoUrl = p.brandLogo && p.brandLogo !== '/logos/dear_ekra_default.jpg' ? p.brandLogo : null;
+        
+        if (existing) {
+          if (logoUrl) existing.logo = logoUrl;
+        } else if (logoUrl) {
+          list.push({
+            id: p.id || `brand-${brandName}`,
+            name: brandName,
+            logo: logoUrl,
+            type: p.categoryLabel || p.category || 'Brand Partner'
+          });
+        }
+      });
+    }
+    return list;
+  }, [projects]);
 
   const handlePrev = (e) => {
     e.stopPropagation();
@@ -351,13 +376,13 @@ export default function Hero({ onOpenCollab, activeLookIndex = 0, onSelectLookIn
               </p>
             </div>
             <span className="text-[11px] font-medium text-zinc-400">
-              18+ Leading Brands & Local Businesses
+              {displayLogos.length}+ Leading Brands & Local Businesses
             </span>
           </div>
 
           {/* High-Visibility 6-Column Brand Collage Grid (Large Version, 3 Rows × 6 Cols) */}
           <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-3 sm:gap-4">
-            {clientLogos.map((brand) => (
+            {displayLogos.map((brand) => (
               <div
                 key={brand.id}
                 className="relative rounded-2xl bg-white border border-zinc-200/90 shadow-2xs hover:shadow-xl hover:border-pink-400 transition-all duration-300 flex items-center justify-center p-2.5 sm:p-3 h-24 sm:h-28 md:h-32 group cursor-pointer"
