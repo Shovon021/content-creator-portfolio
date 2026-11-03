@@ -1,0 +1,84 @@
+
+==========================================
+FILE: (1) Dear Ekra Reels _ Facebook.html
+==========================================
+Size: 8.13 MB
+
+Found 275 mentions of 'followers'. Top snippets:
+  * _AQTp0L8z8fKJaegmBXYt7ZLF0GBjlUKFe5c_Wjd61rG5ZQ&oe=6AEC0571","snippet":"Shopping Center \u00b7 1.6K followers","source_as_enum":"TYPEAHEAD_PAGE_MARKER","text":"Undergraduate HUB","type":"user"},"disam
+  * A9b8sq2GzxrNwFzXRWjcSmEIUxaEi_Kohbx4zk5nQ&oe=6AEBEDD2","snippet":"Interior Design Studio \u00b7 18K followers","source_as_enum":"TYPEAHEAD_PAGE_MARKER","text":"Design Code","type":"user"},"disambiguat
+  * 00_AQRzs44t4zzT0NLLg9XwWOBdm1rP1XGBphMdCsGn-xE4pw&oe=6AEBF973","snippet":"Cooking School \u00b7 63K followers","source_as_enum":"TYPEAHEAD_PAGE_MARKER","text":"Chef's & Crafts - Malibagh Branch","type
+  * _AQTsYsy21eaK4zUEMItHpM7dx_ZcJTF1A3rSMa5hsZUnHg&oe=6AEBDB6B","snippet":"Digital creator \u00b7 1.6K followers","source_as_enum":"TYPEAHEAD_USER_MARKER","text":"S M Sayem","type":"user"},"disambiguatio
+  * 00_AQQMnQrLEWheJVjKTFCkjEQz-HEo0bI5V8ZZ8ucsy7RWsw&oe=6AEBEEFA","snippet":"Digital creator \u00b7 1K followers","source_as_enum":"TYPEAHEAD_USER_MARKER","text":"Md Sumon Faragi","type":"user"},"disambi
+  * 0_AQRoiW1b-VlbuWLRUyddIrGD3Ss06jBWTBHHM-lr_P5FAA&oe=6AEBEEAE","snippet":"Digital creator \u00b7 50K followers","source_as_enum":"TYPEAHEAD_USER_MARKER","text":"Kamrul Hassan","type":"user"},"disambigu
+  * b2a8&oh=00_AQRu5ItXA3ZCz0-w_d7zzHtWEMFO13xsbj8Ex9Pe9iTxJQ&oe=6AEBD6C6","snippet":"Writer \u00b7 47K followers","source_as_enum":"TYPEAHEAD_PAGE_MARKER","text":"Assignment Fixer","type":"user"},"disamb
+  * 00021872984410"}],"facepile_profile_count":13,"facepile_uri":"https:\/\/www.facebook.com\/3kraneha\/followers\/"},"top_banner":null,"profile_intro_card":{"context_items":{"edges":[{"node":{"page_uri":
+  * AQT_KsqC5-psqRUfn5GA-SkTdQx8UsD2eiltqw41nZmFbQ&oe=6AEBEBB3","snippet":"Burger Restaurant \u00b7 11K followers","source_as_enum":"TYPEAHEAD_PAGE_MARKER","text":"Suburgia Bangladesh","type":"user"},"dis
+  * AQSfeq55yjbdelwvq2UYEiROQzqADDv5cNRn3mmduPSixw&oe=6AEC01A6","snippet":"Internet company \u00b7 8.6M followers","source_as_enum":"TYPEAHEAD_PAGE_MARKER","text":"Meta for Developers","type":"user"},"dis
+  * AQQlGY7kEOtCMngWLBK4_eY6_OEcCK-5rpYoOACJe_JJ8Q&oe=6AEBD734","snippet":"Shopping & retail \u00b7 40K followers","source_as_enum":"TYPEAHEAD_PAGE_MARKER","text":"Handsome Man","type":"user"},"disambigua
+  * b2a8&oh=00_AQT7HzLzbwL-3Wk7TOrW1z0ub_qG-46oyCCDV6gNQIhb8Q&oe=6AEBFFCD","snippet":"Actor \u00b7 2.5K followers","source_as_enum":"TYPEAHEAD_PAGE_MARKER","text":"Siam Nooor","type":"user"},"disambiguati
+
+Total Unique Reel IDs: 593
+Reel IDs sample: ['1754443458458035', '1234450435028334', '4204754379787761', '1056235874102015', '2438339133361816', '4234348956855403', '1429319522018754', '1589599115685875', '1114793534243770', '1836193801065175']
+
+Explicit view/play mentions: set()
+
+Brand mentions in (1) Dear Ekra Reels _ Facebook.html:
+  * Sultan: 15 occurrences
+  * Japan Bazar: 3 occurrences
+  * Marshmallow: 7 occurrences
+  * Basecamp: 2 occurrences
+  * Igloo: 0 occurrences
+  * Artistyan: 4 occurrences
+  * PaiMart: 0 occurrences
+  * Dentflix: 2 occurrences
+  * HER Studio: 2 occurrences
+  * Cake Town: 0 occurrences
+  * Alvin: 0 occurrences
+  * Tehani: 0 occurrences
+  * Twist: 0 occurrences
+  * 6sence: 0 occurrences
+  * ChildrenGoods: 0 occurrences
+  * Elhoe: 0 occurrences
+
+==========================================
+FILE: Facebook.html
+==========================================
+Size: 24.81 MB
+
+Found 266 mentions of 'followers'. Top snippets:
+  * _AQTp0L8z8fKJaegmBXYt7ZLF0GBjlUKFe5c_Wjd61rG5ZQ&oe=6AEC0571","snippet":"Shopping Center \u00b7 1.6K followers","source_as_enum":"TYPEAHEAD_PAGE_MARKER","text":"Undergraduate HUB","type":"user"},"disam
+  * A9b8sq2GzxrNwFzXRWjcSmEIUxaEi_Kohbx4zk5nQ&oe=6AEBEDD2","snippet":"Interior Design Studio \u00b7 18K followers","source_as_enum":"TYPEAHEAD_PAGE_MARKER","text":"Design Code","type":"user"},"disambiguat
+  * 00_AQRzs44t4zzT0NLLg9XwWOBdm1rP1XGBphMdCsGn-xE4pw&oe=6AEBF973","snippet":"Cooking School \u00b7 63K followers","source_as_enum":"TYPEAHEAD_PAGE_MARKER","text":"Chef's & Crafts - Malibagh Branch","type
+  * _AQTsYsy21eaK4zUEMItHpM7dx_ZcJTF1A3rSMa5hsZUnHg&oe=6AEBDB6B","snippet":"Digital creator \u00b7 1.6K followers","source_as_enum":"TYPEAHEAD_USER_MARKER","text":"S M Sayem","type":"user"},"disambiguatio
+  * 00_AQQMnQrLEWheJVjKTFCkjEQz-HEo0bI5V8ZZ8ucsy7RWsw&oe=6AEBEEFA","snippet":"Digital creator \u00b7 1K followers","source_as_enum":"TYPEAHEAD_USER_MARKER","text":"Md Sumon Faragi","type":"user"},"disambi
+  * 0_AQRoiW1b-VlbuWLRUyddIrGD3Ss06jBWTBHHM-lr_P5FAA&oe=6AEBEEAE","snippet":"Digital creator \u00b7 50K followers","source_as_enum":"TYPEAHEAD_USER_MARKER","text":"Kamrul Hassan","type":"user"},"disambigu
+  * b2a8&oh=00_AQRu5ItXA3ZCz0-w_d7zzHtWEMFO13xsbj8Ex9Pe9iTxJQ&oe=6AEBD6C6","snippet":"Writer \u00b7 47K followers","source_as_enum":"TYPEAHEAD_PAGE_MARKER","text":"Assignment Fixer","type":"user"},"disamb
+  * 00021872984410"}],"facepile_profile_count":13,"facepile_uri":"https:\/\/www.facebook.com\/3kraneha\/followers\/"},"top_banner":null,"profile_intro_card":{"context_items":{"edges":[{"node":{"page_uri":
+  * AQT_KsqC5-psqRUfn5GA-SkTdQx8UsD2eiltqw41nZmFbQ&oe=6AEBEBB3","snippet":"Burger Restaurant \u00b7 11K followers","source_as_enum":"TYPEAHEAD_PAGE_MARKER","text":"Suburgia Bangladesh","type":"user"},"dis
+  * AQSfeq55yjbdelwvq2UYEiROQzqADDv5cNRn3mmduPSixw&oe=6AEC01A6","snippet":"Internet company \u00b7 8.6M followers","source_as_enum":"TYPEAHEAD_PAGE_MARKER","text":"Meta for Developers","type":"user"},"dis
+  * AQQlGY7kEOtCMngWLBK4_eY6_OEcCK-5rpYoOACJe_JJ8Q&oe=6AEBD734","snippet":"Shopping & retail \u00b7 40K followers","source_as_enum":"TYPEAHEAD_PAGE_MARKER","text":"Handsome Man","type":"user"},"disambigua
+  * b2a8&oh=00_AQT7HzLzbwL-3Wk7TOrW1z0ub_qG-46oyCCDV6gNQIhb8Q&oe=6AEBFFCD","snippet":"Actor \u00b7 2.5K followers","source_as_enum":"TYPEAHEAD_PAGE_MARKER","text":"Siam Nooor","type":"user"},"disambiguati
+
+Total Unique Reel IDs: 85
+Reel IDs sample: ['9692580367418682', '2438339133361816', '1429319522018754', '1589599115685875', '1114793534243770', '1836193801065175', '1598474671769710', '1575731487640986', '1647677483726508', '1680627920449813']
+
+Explicit view/play mentions: set()
+
+Brand mentions in Facebook.html:
+  * Sultan: 17 occurrences
+  * Japan Bazar: 17 occurrences
+  * Marshmallow: 32 occurrences
+  * Basecamp: 10 occurrences
+  * Igloo: 0 occurrences
+  * Artistyan: 4 occurrences
+  * PaiMart: 6 occurrences
+  * Dentflix: 3 occurrences
+  * HER Studio: 4 occurrences
+  * Cake Town: 2 occurrences
+  * Alvin: 1 occurrences
+  * Tehani: 14 occurrences
+  * Twist: 0 occurrences
+  * 6sence: 0 occurrences
+  * ChildrenGoods: 2 occurrences
+  * Elhoe: 2 occurrences
