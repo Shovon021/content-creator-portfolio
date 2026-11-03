@@ -87,14 +87,23 @@ export default function WorkGallery({ projects = [], onPlayVideo }) {
     }
   }, [selectedImpact]);
 
+  // Filter out brand-only / logo-only entries from the video gallery
+  const galleryProjects = React.useMemo(() => {
+    return projects.filter(p => {
+      const cat = (p.category || '').toLowerCase().trim();
+      if (cat === 'brand-only' || cat === 'logo-only') return false;
+      return Boolean(p.videoUrl || p.headline || p.localVideoUrl);
+    });
+  }, [projects]);
+
   // Dynamic categories: standard known sections + any newly added category from Google Sheets
   const dynamicCategorySections = React.useMemo(() => {
     const knownIds = new Set(CATEGORY_SECTIONS.map(s => s.id));
     const sections = [...CATEGORY_SECTIONS];
 
-    // Collect extra categories present in projects
+    // Collect extra categories present in gallery projects
     const extraCategories = new Set();
-    projects.forEach(p => {
+    galleryProjects.forEach(p => {
       const cat = (p.category || '').toLowerCase().trim();
       if (cat && !knownIds.has(cat)) {
         extraCategories.add(cat);
@@ -102,7 +111,7 @@ export default function WorkGallery({ projects = [], onPlayVideo }) {
     });
 
     extraCategories.forEach(cat => {
-      const sample = projects.find(p => (p.category || '').toLowerCase().trim() === cat);
+      const sample = galleryProjects.find(p => (p.category || '').toLowerCase().trim() === cat);
       const title = sample?.categoryLabel || cat.charAt(0).toUpperCase() + cat.slice(1);
       sections.push({
         id: cat,
@@ -112,7 +121,7 @@ export default function WorkGallery({ projects = [], onPlayVideo }) {
     });
 
     return sections;
-  }, [projects]);
+  }, [galleryProjects]);
 
   return (
     <section 
@@ -123,7 +132,7 @@ export default function WorkGallery({ projects = [], onPlayVideo }) {
         
         {/* Category Sections (Frameless, Spacious, Editorial) */}
         {dynamicCategorySections.map((section) => {
-          const sectionProjects = projects.filter(p => (p.category || '').toLowerCase().trim() === section.id);
+          const sectionProjects = galleryProjects.filter(p => (p.category || '').toLowerCase().trim() === section.id);
           if (sectionProjects.length === 0) return null;
 
           const desktopChunks = chunkCardsForDesktopRhythm(sectionProjects);
