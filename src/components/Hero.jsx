@@ -7,19 +7,32 @@ export default function Hero({ onOpenCollab, activeLookIndex = 0, onSelectLookIn
   const currentIndex = activeLookIndex;
   const activeLook = portraitLooks[currentIndex] || portraitLooks[0];
 
-  // Dynamically merge base logos with any new brand logos added in Google Sheets
+  // Only show logos that are real brand logos (must be from /logos/ folder)
+  // Start from the hardcoded list and only add NEW brands from Google Sheets
   const displayLogos = React.useMemo(() => {
     const list = [...clientLogos];
+
     if (Array.isArray(projects) && projects.length > 0) {
       projects.forEach((p) => {
         if (!p.brand) return;
         const brandName = p.brand.trim();
-        const existing = list.find(l => l.name?.toLowerCase().trim() === brandName.toLowerCase());
-        const logoUrl = p.brandLogo && p.brandLogo !== '/logos/dear_ekra_default.jpg' ? p.brandLogo : null;
-        
-        if (existing) {
-          if (logoUrl) existing.logo = logoUrl;
-        } else if (logoUrl) {
+
+        // Only accept logo URLs that are actual logo files (from /logos/ folder or external URLs ending in image ext)
+        const logoUrl = p.brandLogo;
+        const isRealLogo = logoUrl &&
+          logoUrl !== '/logos/dear_ekra_default.jpg' &&
+          logoUrl !== '/logos/dear_ekra_default.webp' &&
+          !logoUrl.startsWith('/thumbnails/') &&
+          !logoUrl.startsWith('/portraits/') &&
+          !logoUrl.startsWith('/previews/') &&
+          !logoUrl.startsWith('/videos/') &&
+          (logoUrl.startsWith('/logos/') || logoUrl.startsWith('http'));
+
+        if (!isRealLogo) return; // Skip if no proper logo
+
+        // Only add brands NOT already in the hardcoded list
+        const alreadyExists = list.find(l => l.name?.toLowerCase().trim() === brandName.toLowerCase());
+        if (!alreadyExists) {
           list.push({
             id: p.id || `brand-${brandName}`,
             name: brandName,
