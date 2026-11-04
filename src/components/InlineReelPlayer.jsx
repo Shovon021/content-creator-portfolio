@@ -165,53 +165,31 @@ export default function InlineReelPlayer({ item, aspect = '4/5', onOpenTheater }
     }
   };
 
-  // --- 3. Mobile In-View Observer (≥60% Visible) ---
+  // --- 3. Mobile Scroll Observer (Disabled Auto-Preview for Smooth Native Feel) ---
+  // On mobile/touch devices, we do NOT auto-play video previews to eliminate glitchy/laggy scrolling.
+  // Instead, the crisp thumbnail is shown, and video only plays on intentional user click/tap.
   useEffect(() => {
-    if (!isTouchDevice || isDataSaver || isReducedMotion) return;
+    if (!isTouchDevice) return;
     if (!containerRef.current) return;
 
+    // Only observe to PAUSE active playback if scrolled far off-screen
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting && entry.intersectionRatio >= 0.6) {
-            // Only preview if no reel is currently playing inline
-            if (!videoStore.getState().activeReelId && !isGlobalActive) {
-              const token = ++requestToken.current;
-              triggerInView();
-              videoStore.setPreview(item.id);
-
-              if (videoRef.current && item.previewSrc) {
-                videoRef.current.src = item.previewSrc;
-                videoRef.current.muted = true;
-                videoRef.current.play()
-                  .then(() => {
-                    if (token === requestToken.current) {
-                      triggerCanPlay();
-                      startProgressLoop();
-                    }
-                  })
-                  .catch(() => {});
-              }
-            }
-          } else if (entry.intersectionRatio < 0.2) {
-            if (status === REEL_STATES.PREVIEWING || status === REEL_STATES.PREVIEW_LOADING) {
-              videoStore.clearPreview(item.id);
-              flushVideoBuffer();
-              triggerLeave();
-            } else if (status === REEL_STATES.PLAYING) {
-              // Pause active player if scrolled off screen
+          if (!entry.isIntersecting || entry.intersectionRatio < 0.15) {
+            if (status === REEL_STATES.PLAYING) {
               if (videoRef.current) videoRef.current.pause();
               triggerPause();
             }
           }
         });
       },
-      { threshold: [0.2, 0.6] }
+      { threshold: [0.15] }
     );
 
     observer.observe(containerRef.current);
     return () => observer.disconnect();
-  }, [isTouchDevice, isDataSaver, isReducedMotion, isGlobalActive, status, item.previewSrc, triggerInView, triggerCanPlay, triggerLeave, triggerPause, flushVideoBuffer, startProgressLoop, item.id]);
+  }, [isTouchDevice, status, triggerPause]);
 
   // --- 4. Page Visibility Change (Tab Hidden) ---
   useEffect(() => {

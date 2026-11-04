@@ -7,18 +7,21 @@ export default function Hero({ onOpenCollab, activeLookIndex = 0, onSelectLookIn
   const currentIndex = activeLookIndex;
   const activeLook = portraitLooks[currentIndex] || portraitLooks[0];
 
-  // Only show logos that are real brand logos (must be from /logos/ folder)
-  // Start from the hardcoded list and only add NEW brands from Google Sheets
+  // Only show logos that are real brand logos (must be from /logos/ folder or external URLs)
+  // Start from the hardcoded list and only add genuinely NEW brands/logos from Google Sheets
   const displayLogos = React.useMemo(() => {
     const list = [...clientLogos];
+    const seenNames = new Set(list.map(l => l.name?.toLowerCase().trim()));
+    const seenLogos = new Set(list.map(l => l.logo?.toLowerCase().trim()));
 
     if (Array.isArray(projects) && projects.length > 0) {
       projects.forEach((p) => {
         if (!p.brand) return;
         const brandName = p.brand.trim();
+        const brandKey = brandName.toLowerCase();
 
-        // Only accept logo URLs that are actual logo files (from /logos/ folder or external URLs ending in image ext)
-        const logoUrl = p.brandLogo;
+        // Only accept logo URLs that are actual logo files (from /logos/ folder or external URLs)
+        const logoUrl = p.brandLogo?.trim();
         const isRealLogo = logoUrl &&
           logoUrl !== '/logos/dear_ekra_default.jpg' &&
           logoUrl !== '/logos/dear_ekra_default.webp' &&
@@ -30,11 +33,14 @@ export default function Hero({ onOpenCollab, activeLookIndex = 0, onSelectLookIn
 
         if (!isRealLogo) return; // Skip if no proper logo
 
-        // Only add brands NOT already in the hardcoded list
-        const alreadyExists = list.find(l => l.name?.toLowerCase().trim() === brandName.toLowerCase());
-        if (!alreadyExists) {
+        const logoKey = logoUrl.toLowerCase();
+
+        // Only add brands NOT already in the list by name AND whose logo isn't already displayed
+        if (!seenNames.has(brandKey) && !seenLogos.has(logoKey)) {
+          seenNames.add(brandKey);
+          seenLogos.add(logoKey);
           list.push({
-            id: p.id || `brand-${brandName}`,
+            id: p.id || `brand-${brandKey}`,
             name: brandName,
             logo: logoUrl,
             type: p.categoryLabel || p.category || 'Brand Partner'

@@ -306,6 +306,7 @@
   },
   {
     id: "proj-paimart",
+    brand: "PaiMart",
     brandLogo: "/logos/logo8.webp",
     viewCount: "2.1K",
     location: "Uttara Sector 14, Dhaka",
@@ -648,9 +649,10 @@ export const clientLogos = [
   { id: 3, name: "Japan Bazar", logo: "/logos/logo2.webp", type: "Japanese Skincare & Cosmetics" },
   { id: 4, name: "6sence HQ", logo: "/logos/logo3.jpg", type: "Creative & Brand Studio" },
   { id: 5, name: "Marshmallow Tech", logo: "/logos/logo4.png", type: "Anime Gadget Shop" },
-  { id: 6, name: "Air Force BASECAMP", logo: "/logos/logo18.webp", type: "Resort & Adventure Park" },
+  { id: 6, name: "Air Force BASECAMP", logo: "/logos/logo5.jpg", type: "Resort & Adventure Park" },
   { id: 7, name: "Igloo Ice Cream", logo: "/logos/logo6.webp", type: "Ice Cream & FMCG" },
   { id: 8, name: "Artistyan Cafe", logo: "/logos/logo7.webp", type: "Art Cafe & Specialty Coffee" },
+  { id: 9, name: "PaiMart", logo: "/logos/logo8.webp", type: "Superstore & Retail" },
   { id: 10, name: "HER Studio & Salon", logo: "/logos/logo9.webp", type: "Luxury Beauty & Spa" },
   { id: 11, name: "Ayesha's De Gallery", logo: "/logos/logo10.webp", type: "Designer Fashion & Lifestyle" },
   { id: 12, name: "Elhoe Beauty", logo: "/logos/logo11.jpg", type: "Skincare & Cosmetics" },
@@ -660,7 +662,8 @@ export const clientLogos = [
   { id: 16, name: "Printing Art BD", logo: "/logos/logo15.jpg", type: "Custom Canvas & Art Prints" },
   { id: 17, name: "Ekras Beauty Mart", logo: "/logos/logo16.jpg", type: "Beauty & Personal Care" },
   { id: 18, name: "Twist Chewing Gum", logo: "/logos/logo17.jpg", type: "FMCG Confectionery" },
-  { id: 19, name: "Cake Town BD Group", logo: "/logos/logo19.webp", type: "Bakery & Celebration Cakes" }
+  { id: 19, name: "Cake Town BD Group", logo: "/logos/logo18.webp", type: "Bakery & Celebration Cakes" },
+  { id: 20, name: "Dentflix Dentistry", logo: "/logos/logo19.webp", type: "Modern Dental Care" }
 ];
 
 export const statsTicker = [
