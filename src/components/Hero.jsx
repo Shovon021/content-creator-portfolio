@@ -180,7 +180,7 @@ export default function Hero({ onOpenCollab, activeLookIndex = 0, onSelectLookIn
 
                 {/* Instagram Large Icon Only */}
                 <a
-                  href="https://www.instagram.com/_rukey._/"
+                  href="https://www.instagram.com/dear.ekra/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-11 h-11 sm:w-12 sm:h-12 lg:w-13 lg:h-13 rounded-2xl bg-white hover:bg-pink-50/50 border border-zinc-200/90 hover:border-[#E4405F]/40 shadow-xs hover:shadow-md flex items-center justify-center transition-all duration-300 hover:scale-110 active:scale-95 cursor-pointer group"
@@ -237,7 +237,7 @@ export default function Hero({ onOpenCollab, activeLookIndex = 0, onSelectLookIn
 
                 {/* LinkedIn Large Icon Only */}
                 <a
-                  href="https://www.linkedin.com/in/rukaiya-binta-hossain-aaab7336a?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+                  href="https://www.linkedin.com/in/rukaiya-binta-hossain-aaab7336a"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-11 h-11 sm:w-12 sm:h-12 lg:w-13 lg:h-13 rounded-2xl bg-white hover:bg-sky-50/50 border border-zinc-200/90 hover:border-[#0A66C2]/40 shadow-xs hover:shadow-md flex items-center justify-center transition-all duration-300 hover:scale-110 active:scale-95 cursor-pointer group"

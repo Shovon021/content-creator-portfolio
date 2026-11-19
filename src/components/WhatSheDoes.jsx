@@ -227,7 +227,7 @@ export default function WhatSheDoes() {
 
                 {/* Instagram */}
                 <a
-                  href="https://www.instagram.com/_rukey._/"
+                  href="https://www.instagram.com/dear.ekra/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl sm:rounded-2xl bg-white hover:bg-pink-50/50 border border-zinc-200/90 hover:border-[#E4405F]/40 shadow-2xs hover:shadow-xs flex items-center justify-center transition-all duration-300 hover:scale-108 active:scale-95 cursor-pointer group"
@@ -270,7 +270,7 @@ export default function WhatSheDoes() {
 
                 {/* LinkedIn */}
                 <a
-                  href="https://www.linkedin.com/in/rukaiya-binta-hossain-aaab7336a?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+                  href="https://www.linkedin.com/in/rukaiya-binta-hossain-aaab7336a"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl sm:rounded-2xl bg-white hover:bg-sky-50/50 border border-zinc-200/90 hover:border-[#0A66C2]/40 shadow-2xs hover:shadow-xs flex items-center justify-center transition-all duration-300 hover:scale-108 active:scale-95 cursor-pointer group"

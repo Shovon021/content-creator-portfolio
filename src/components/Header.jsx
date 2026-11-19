@@ -185,7 +185,7 @@ export default function Header({
     },
     {
       name: 'Instagram',
-      href: 'https://instagram.com/3kraneha',
+      href: 'https://www.instagram.com/dear.ekra/',
       bg: 'bg-gradient-to-tr from-[#FFB900] via-[#D62976] to-[#4F5BD5]',
       icon: (
         <svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
@@ -219,7 +219,7 @@ export default function Header({
     },
     {
       name: 'LinkedIn',
-      href: 'https://linkedin.com',
+      href: 'https://www.linkedin.com/in/rukaiya-binta-hossain-aaab7336a',
       bg: 'bg-[#0A66C2]',
       icon: (
         <svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">

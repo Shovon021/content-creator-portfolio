@@ -1,5 +1,22 @@
+# Dear Ekra — robots.txt
+# Fixed 2026-11-19: sitemap used to point to dearekra.com (wrong domain).
+# AI crawlers are allowed — blocking them hurts GEO / AI recommendations.
 User-agent: *
 Allow: /
 
-Sitemap: https://dearekra.com/sitemap.xml
+User-agent: GPTBot
+Allow: /
 
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+Sitemap: https://mydearekra.pages.dev/sitemap.xml
