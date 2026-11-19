@@ -7,6 +7,8 @@ import { fetchPortfolioProjects } from './services/sheetService';
 
 // Lazy-load below-the-fold components for faster initial paint
 const ScrollStatement = lazy(() => import('./components/ScrollStatement'));
+const AboutSection = lazy(() => import('./components/AboutSection'));
+const FaqSection = lazy(() => import('./components/FaqSection'));
 const WorkGallery = lazy(() => import('./components/WorkGallery'));
 const WorkingPrinciples = lazy(() => import('./components/WorkingPrinciples'));
 const WhatSheDoes = lazy(() => import('./components/WhatSheDoes'));
@@ -129,6 +131,9 @@ export default function App() {
           {/* Statement Banner: Curated Creator Showcase with Kinetic Illumination */}
           <ScrollStatement activeLookIndex={selectedLookIndex} />
 
+          {/* 2b. About Dear Ekra (visible SEO/GEO section, verified content only) */}
+          <AboutSection />
+
           {/* 3. Full Work Gallery with in-site video trigger */}
           <WorkGallery
             projects={projects}
@@ -143,6 +148,9 @@ export default function App() {
 
           {/* 6. Words from Business Owners (Renders nothing until real testimonials are added) */}
           <BrandFeedback />
+
+          {/* 6b. FAQ (visible SEO/GEO section, same Q&A as FAQPage JSON-LD) */}
+          <FaqSection />
 
           {/* 7. Collaborate Form & Direct Channels */}
           <CollaborateSection />
