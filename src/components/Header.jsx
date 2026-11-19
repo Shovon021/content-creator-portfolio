@@ -270,7 +270,7 @@ export default function Header({
                 >
                   <img 
                     src={activeLook.image} 
-                    alt="Dear Ekra" 
+                    alt="Rukaiya Binta Hossain Ekra (Dear Ekra) — Content Creator & Brand Promoter" 
                     className="w-full h-full object-cover object-top rounded-full"
                   />
                 </div>
@@ -458,7 +458,7 @@ export default function Header({
               >
                 <img 
                   src={activeLook.image} 
-                  alt="Dear Ekra" 
+                  alt="Rukaiya Binta Hossain Ekra (Dear Ekra) — Content Creator & Brand Promoter" 
                   className="w-full h-full object-cover object-top rounded-full"
                 />
               </div>

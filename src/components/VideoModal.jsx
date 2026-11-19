@@ -103,7 +103,7 @@ export default function VideoModal({ isOpen, onClose, video, initialTime = 0 }) 
               {/* Cover Image */}
               <img
                 src={video.videoThumbnail}
-                alt=""
+                alt={video.title || 'Dear Ekra campaign reel'}
                 className="absolute inset-0 w-full h-full object-cover"
               />
 

@@ -21,7 +21,7 @@ export default function Footer() {
           <source srcSet="/portraits/dear-ekra-footer-art-money.webp" type="image/webp" />
           <img
             src="/portraits/dear-ekra-footer-art-money.jpg"
-            alt="Dear Ekra - Dhaka's Leading Lifestyle & Food Creator"
+            alt="Rukaiya Binta Hossain Ekra (Dear Ekra) — Dhaka's Leading Lifestyle & Food Creator"
             className="w-full h-auto object-cover object-bottom block select-none pointer-events-none"
             loading="lazy"
             decoding="async"
