@@ -455,6 +455,28 @@
     ],
     aspect: "vertical"
   },
+  {
+    id: "proj-dabirulia",
+    brand: "Da Birulia",
+    brandLogo: "/logos/dear_ekra_default.webp",
+    viewCount: "2.6K",
+    location: "Da Birulia, Savar",
+    category: "travel",
+    categoryLabel: "Destination & Resort Marketing, Travel Review Content",
+    title: "Sometimes, All You Need Is a Little Getaway — Da Birulia, Savar",
+    deliverable: "1x Resort Getaway Reel",
+    headline: "A little getaway — resort stay and promotion at Da Birulia, Savar.",
+    story: "Short getaway reel from a resort stay at Da Birulia, Savar: \"Sometimes, all you need is a little getaway.\"",
+    impact: "ডা বিরুলিয়ায় স্টে করে তৈরি এই গেটঅ্যাওয়ে রিলটি রিসোর্টটির প্রমোশনের জন্য প্রকাশ করা হয়েছে।",
+    featured: false,
+    videoThumbnail: "/thumbnails/reel_1m_stay.webp",
+    videoUrl: "https://www.facebook.com/reel/1913636016743893",
+    date: "Travel Diary",
+    shareSlug: "dabirulia",
+    hasAudioTrack: true,
+    duration: 43,
+    aspect: "vertical"
+  },
 
   // 5. Personal Vlogs & Campus Life
   {
