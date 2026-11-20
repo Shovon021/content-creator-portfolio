@@ -268,7 +268,7 @@ export default function Hero({ onOpenCollab, activeLookIndex = 0, onSelectLookIn
 
               <div className="bg-white/60 sm:bg-transparent rounded-xl sm:rounded-2xl p-1.5 sm:p-0 border border-pink-100/50 sm:border-0 shadow-2xs sm:shadow-none space-y-0.5">
                 <div className="text-base sm:text-2xl lg:text-3xl font-black font-display tracking-tight text-zinc-900">
-                  16K+
+                  19K+
                 </div>
                 <div className="text-[9px] sm:text-xs text-zinc-500 font-medium leading-tight">
                   Active Followers

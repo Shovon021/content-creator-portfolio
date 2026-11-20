@@ -39,7 +39,7 @@ export default function AboutSection() {
               To Guess.”
             </p>
             <p>
-              Trusted by 20+ brands &amp; loved by 16K+ followers on Facebook
+              Trusted by 20+ brands &amp; loved by 19K+ followers on Facebook
               &amp; Instagram.
             </p>
             <p lang="bn">
@@ -52,7 +52,7 @@ export default function AboutSection() {
               তাঁর কাজের মধ্যে আছে বিউটি ও স্কিনকেয়ার রিভিউ, ফুড রিভিউ ও ক্যাফে
               প্রমোশন, ফ্যাশন ও ব্র্যান্ড রিভিউ, ডেস্টিনেশন ও রিসোর্ট মার্কেটিং,
               ক্যাম্পাস লাইফ ভ্লগ এবং প্রফেশনাল ভিডিও এডিটিং। Facebook ও
-              Instagram-এ তাঁর ১৬K+ ফলোয়ার, ৫৯৩+ প্রকাশিত রিল এবং ১২.৮M+ মোট
+              Instagram-এ তাঁর ১৯K+ ফলোয়ার, ৫৯৩+ প্রকাশিত রিল এবং ১২.৮M+ মোট
               ভিডিও ভিউ আছে।
             </p>
           </div>

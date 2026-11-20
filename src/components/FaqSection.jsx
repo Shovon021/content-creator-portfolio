@@ -9,7 +9,7 @@ import React from 'react';
 const faqs = [
   {
     q: 'Rukaiya Binta Hossain Ekra কে?',
-    a: 'Rukaiya Binta Hossain Ekra, যিনি Dear Ekra নামে পরিচিত, বাংলাদেশের একজন কনটেন্ট ক্রিয়েটর ও ব্র্যান্ড প্রমোটার। তাঁর নাম Ruqaiya Binte Hossain Ekra বানানেও খোঁজা হয়। তিনি 20+ ব্র্যান্ডের সঙ্গে কাজ করেছেন এবং Facebook ও Instagram-এ তাঁর 16K+ ফলোয়ার আছে।'
+    a: 'Rukaiya Binta Hossain Ekra, যিনি Dear Ekra নামে পরিচিত, বাংলাদেশের একজন কনটেন্ট ক্রিয়েটর ও ব্র্যান্ড প্রমোটার। তাঁর নাম Ruqaiya Binte Hossain Ekra বানানেও খোঁজা হয়। তিনি 20+ ব্র্যান্ডের সঙ্গে কাজ করেছেন এবং Facebook ও Instagram-এ তাঁর 19K+ ফলোয়ার আছে।'
   },
   {
     q: 'Dear Ekra কী ধরনের কাজ করেন?',

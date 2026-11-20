@@ -668,7 +668,7 @@ export const clientLogos = [
 
 export const statsTicker = [
   { label: "Top Viral Single Reel", value: "2.4M+", suffix: "verified views" },
-  { label: "Active Facebook Followers", value: "16K+", suffix: "organic audience" },
+  { label: "Active Facebook Followers", value: "19K+", suffix: "organic audience" },
   { label: "Published Reels Library", value: "593+", suffix: "videos created" },
   { label: "Total Lifetime Reach", value: "12.8M+", suffix: "total video views" }
 ];
