@@ -79,11 +79,10 @@ export function parseCSV(text) {
       continue;
     }
 
-    // Match with bundled initial project by id OR brand name
-    const foundInitial = initialProjects.find(p => 
-      (obj.id && p.id === obj.id) || 
-      (brand && p.brand.toLowerCase().trim() === brand.toLowerCase().trim())
-    );
+    // Match with bundled initial project: exact id first, then brand name
+    // (brand-only matching can pick the wrong entry when several projects share a brand)
+    const foundInitial = initialProjects.find(p => obj.id && p.id === obj.id)
+      || initialProjects.find(p => brand && p.brand.toLowerCase().trim() === brand.toLowerCase().trim());
 
     const logo = obj.brandlogo || obj.logo || obj.logourl || obj.image || (foundInitial ? foundInitial.brandLogo : '');
     const video = obj.videourl || obj.video || obj.link || obj.reellink || obj.url || (foundInitial ? foundInitial.videoUrl : '');
