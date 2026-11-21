@@ -7,27 +7,27 @@ const CATEGORY_SECTIONS = [
   {
     id: 'beauty',
     title: 'Beauty & Skincare',
-    subtitle: 'Authentic product testing, real-skin tutorials, and genuine beauty reviews.'
+    subtitle: 'Beauty & skincare reviews in Bangladesh — authentic product testing, real-skin tutorials and PR demos.'
   },
   {
     id: 'food',
     title: 'Launch & Grand Opening Promotion, Food Experience Reviews',
-    subtitle: 'Aesthetic student adda spots, grand opening feasts, and beverage tastings.'
+    subtitle: 'Food reviews & grand opening promotion in Dhaka — cafe tours, dining reviews and beverage tastings.'
   },
   {
     id: 'fashion',
     title: 'Fashion Styling & Collection Showcase, Brand Product Review',
-    subtitle: 'Graceful festive wear styling, handloom drapes, and trendy collections.'
+    subtitle: 'Fashion styling & brand product reviews in Bangladesh — collection showcases and festive wear styling.'
   },
   {
     id: 'travel',
     title: 'Destination & Resort Marketing, Travel Review Content',
-    subtitle: 'Immersive monsoon travel diaries, scenic tea garden breezes, and resorts.'
+    subtitle: 'Destination & resort marketing in Bangladesh — resort stays, travel reviews and destination vlogs.'
   },
   {
     id: 'personal',
     title: 'Campus Life & Vlogs',
-    subtitle: 'Relatable student commuter comedy, campus apps, and lifestyle stories.'
+    subtitle: 'Campus life & personal vlogs in Dhaka — EWU student life, campus fairs and lifestyle stories.'
   }
 ];
 
