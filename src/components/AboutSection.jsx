@@ -28,7 +28,19 @@ export default function AboutSection() {
           <div className="mt-4 sm:mt-5 space-y-4 text-base sm:text-lg leading-relaxed text-zinc-600">
             <p>
               Rukaiya Binta Hossain Ekra, known as Dear Ekra, is a content
-              creator and brand promoter in Bangladesh.
+              creator and brand promoter in Bangladesh. Based in Dhaka, she
+              creates brand promotion campaigns, product reviews, food and
+              cafe reviews, fashion showcases, resort and destination
+              marketing, and professionally edited reels for brands across
+              Bangladesh — see her{' '}
+              <a href="#gallery" className="underline underline-offset-4">
+                campaigns and reels
+              </a>{' '}
+              and{' '}
+              <a href="#services" className="underline underline-offset-4">
+                services
+              </a>
+              .
             </p>
             <p>
               Every collaboration starts with honest experience and ends with
