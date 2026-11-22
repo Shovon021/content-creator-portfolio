@@ -132,6 +132,7 @@ export const videoStore = {
 export function useVideoStore(selector) {
   return useSyncExternalStore(
     videoStore.subscribe,
+    () => selector(videoStore.getState()),
     () => selector(videoStore.getState())
   );
 }
