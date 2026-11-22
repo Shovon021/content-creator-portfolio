@@ -645,6 +645,28 @@
     duration: 133,
     aspect: "vertical"
   },
+  {
+    id: "proj-dabirulia-poem",
+    brand: "Da Birulia",
+    brandLogo: "/logos/dabirulia_logo.webp",
+    viewCount: "1.2K",
+    location: "Da Birulia, Savar",
+    category: "travel",
+    categoryLabel: "Destination & Resort Marketing, Travel Review Content",
+    title: "Fire Esho — Poetry at Da Birulia, Savar",
+    deliverable: "1x Resort Poetry Reel",
+    headline: "Fire Esho — Poetry at Da Birulia, Savar",
+    story: "A short poem recitation filmed at Da Birulia premium villa in Savar, shared on the Dear Ekra Facebook Page.",
+    impact: "Dear Ekra পেজে প্রকাশিত Da Birulia-র কবিতা আবৃত্তির রিল।",
+    featured: false,
+    videoThumbnail: "/thumbnails/dabirulia_poem.webp",
+    videoUrl: "https://www.facebook.com/reel/1204285398789966",
+    shareSlug: "dabirulia-poem",
+    date: "Travel Diary",
+    hasAudioTrack: true,
+    duration: 19,
+    aspect: "vertical"
+  },
   // 5. Personal Vlogs & Campus Life
   {
     id: "proj-commutevlog",
