@@ -540,7 +540,7 @@
   {
     id: "proj-dabirulia",
     brand: "Da Birulia",
-    brandLogo: "/logos/dear_ekra_default.webp",
+    brandLogo: "/logos/dabirulia_logo.webp",
     viewCount: "2.6K",
     location: "Da Birulia, Savar",
     category: "travel",
@@ -562,7 +562,7 @@
   {
     id: "proj-dabirulia-villa",
     brand: "Da Birulia",
-    brandLogo: "/logos/dear_ekra_default.webp",
+    brandLogo: "/logos/dabirulia_logo.webp",
     viewCount: "2.8K",
     location: "Da Birulia, Savar",
     category: "travel",
@@ -626,7 +626,7 @@
   {
     id: "proj-dabirulia-bali",
     brand: "Da Birulia",
-    brandLogo: "/logos/dear_ekra_default.webp",
+    brandLogo: "/logos/dabirulia_logo.webp",
     viewCount: "1.8K",
     location: "Da Birulia, Savar",
     category: "travel",
@@ -896,7 +896,8 @@ export const clientLogos = [
   { id: 19, name: "Cake Town BD Group", logo: "/logos/logo18.webp", type: "Bakery & Celebration Cakes" },
   { id: 20, name: "Dentflix Dentistry", logo: "/logos/logo19.webp", type: "Modern Dental Care" },
   { id: 21, name: "Rice & Noodle Uttara", logo: "/logos/rice_noodle_logo.webp", type: "Restaurant & Dining" },
-  { id: 22, name: "ChileKotha", logo: "/logos/chilekotha_logo.webp", type: "Home Decor & Lighting" }
+  { id: 22, name: "ChileKotha", logo: "/logos/chilekotha_logo.webp", type: "Home Decor & Lighting" },
+  { id: 23, name: "Da Birulia", logo: "/logos/dabirulia_logo.webp", type: "Resort & Villa Stay" }
 ];
 
 export const statsTicker = [
