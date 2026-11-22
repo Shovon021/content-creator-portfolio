@@ -1,12 +1,173 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Dear Ekra — sitemap.xml. Fixed 2026-11-19: used to point to dearekra.com.
-     Single-page site, so only the homepage is listed. Add a <url> block
-     for every new real page (case study, blog) when it is created. -->
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<!-- Dear Ekra — sitemap.xml WITH image entries (DRAFT prepared 2026-11-21, extended to 37 entries 2026-11-22 with villa+Bali real thumbnails, not yet live).
+     Single-page site: all images belong to the homepage URL.
+     Image titles are the exact card/look titles from src/data/portfolioData.js.
+     Daily job: replace public/sitemap.xml with this file, build, push, verify live. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://mydearekra.pages.dev/</loc>
-    <lastmod>2026-11-19</lastmod>
+    <lastmod>2026-11-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://mydearekra.pages.dev/portraits/pic1_cutout.webp</image:loc>
+      <image:title>Rukaiya Binta Hossain Ekra (Dear Ekra) — Sky Blue Saree</image:title>
+      <image:caption>Rukaiya Binta Hossain Ekra (Dear Ekra), content creator &amp; brand promoter in Bangladesh — Sky Blue Saree (Festive &amp; Traditional)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://mydearekra.pages.dev/portraits/pic2_cutout.webp</image:loc>
+      <image:title>Rukaiya Binta Hossain Ekra (Dear Ekra) — Blush Floral Dress</image:title>
+      <image:caption>Rukaiya Binta Hossain Ekra (Dear Ekra), content creator &amp; brand promoter in Bangladesh — Blush Floral Dress (Fashion &amp; Lifestyle)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://mydearekra.pages.dev/portraits/pic4_cutout.webp</image:loc>
+      <image:title>Rukaiya Binta Hossain Ekra (Dear Ekra) — Pastel Aqua Garden</image:title>
+      <image:caption>Rukaiya Binta Hossain Ekra (Dear Ekra), content creator &amp; brand promoter in Bangladesh — Pastel Aqua Garden (Bridal &amp; Partywear)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://mydearekra.pages.dev/portraits/pic5_cutout.webp</image:loc>
+      <image:title>Rukaiya Binta Hossain Ekra (Dear Ekra) — Soft Rose Studio</image:title>
+      <image:caption>Rukaiya Binta Hossain Ekra (Dear Ekra), content creator &amp; brand promoter in Bangladesh — Soft Rose Studio (Chic &amp; Modern Wear)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://mydearekra.pages.dev/portraits/pic6_cutout.webp</image:loc>
+      <image:title>Rukaiya Binta Hossain Ekra (Dear Ekra) — Azure Silk Saree</image:title>
+      <image:caption>Rukaiya Binta Hossain Ekra (Dear Ekra), content creator &amp; brand promoter in Bangladesh — Azure Silk Saree (Classic Modern Saree)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://mydearekra.pages.dev/portraits/pic7_cutout.webp</image:loc>
+      <image:title>Rukaiya Binta Hossain Ekra (Dear Ekra) — Royal Violet Saree</image:title>
+      <image:caption>Rukaiya Binta Hossain Ekra (Dear Ekra), content creator &amp; brand promoter in Bangladesh — Royal Violet Saree (Traditional &amp; Evening)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://mydearekra.pages.dev/portraits/pic8_cutout.webp</image:loc>
+      <image:title>Rukaiya Binta Hossain Ekra (Dear Ekra) — Ruby Crimson Saree</image:title>
+      <image:caption>Rukaiya Binta Hossain Ekra (Dear Ekra), content creator &amp; brand promoter in Bangladesh — Ruby Crimson Saree (Classic Bengali Elegance)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://mydearekra.pages.dev/portraits/dear-ekra-footer-art-money.jpg</image:loc>
+      <image:title>Dear Ekra — Rukaiya Binta Hossain Ekra, Brand Promoter in Bangladesh</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mydearekra.pages.dev/thumbnails/japan_bazar.webp</image:loc>
+      <image:title>Lion Pair Acne Care &amp; Authentic Japanese Beauty Routine — Dear Ekra</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mydearekra.pages.dev/thumbnails/her_studio.webp</image:loc>
+      <image:title>Pampering Myself: Hair Care, Spa &amp; Refreshing Makeover Vlog — Dear Ekra</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mydearekra.pages.dev/thumbnails/dr_alvin.webp</image:loc>
+      <image:title>Authentic Kojic Acid Soap: Smart Usage &amp; Product Test — Dear Ekra</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mydearekra.pages.dev/thumbnails/innsaei.webp</image:loc>
+      <image:title>Lightweight UV Sunscreen &amp; Hair Repair Serum Breakdown — Dear Ekra</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mydearekra.pages.dev/thumbnails/elhoe.webp</image:loc>
+      <image:title>Gentle Glow &amp; Exfoliation: ELHOE Product Experience — Dear Ekra</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mydearekra.pages.dev/thumbnails/cozy_cafe.webp</image:loc>
+      <image:title>Aesthetic Cozy Cafe Near EWU: Student Hangout &amp; Coffee Platters — Dear Ekra</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mydearekra.pages.dev/thumbnails/sultans_dine.webp</image:loc>
+      <image:title>Sultan's Dine Grand Outlet Opening: Authentic Kacchi Feast — Dear Ekra</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mydearekra.pages.dev/thumbnails/tehani_tea.webp</image:loc>
+      <image:title>Aromatic Pure Leaf Experience: Tehani Premium Tea Tasting — Dear Ekra</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mydearekra.pages.dev/thumbnails/cake_town.webp</image:loc>
+      <image:title>Artisanal Chocolate Pastries &amp; Celebration Cakes Showcase — Dear Ekra</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mydearekra.pages.dev/thumbnails/rice_noodle_uttara.webp</image:loc>
+      <image:title>A Lovely Food Experience at Rice &amp; Noodle Uttara — Dear Ekra</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mydearekra.pages.dev/thumbnails/igloo_maltino.webp</image:loc>
+      <image:title>Tasty Tasty: Igloo Ice Cream's New Maltino Flavour — Dear Ekra</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mydearekra.pages.dev/thumbnails/ayeshas_gallery.webp</image:loc>
+      <image:title>Elegance in Motion: Long Dress &amp; Designer Festive Collection — Dear Ekra</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mydearekra.pages.dev/thumbnails/paimart.webp</image:loc>
+      <image:title>Grand Opening: All-In-One Shopping Spree &amp; Household Discount Fest — Dear Ekra</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mydearekra.pages.dev/thumbnails/marshmallow_tech.webp</image:loc>
+      <image:title>Grand Opening: Bangladesh's 1st Anime-Themed Tech &amp; Gadget Shop — Dear Ekra</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mydearekra.pages.dev/thumbnails/children_goods.webp</image:loc>
+      <image:title>Comfortable, Trendy Kids Outfits &amp; Family Fashion Walkthrough — Dear Ekra</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mydearekra.pages.dev/thumbnails/ayesha_matching.webp</image:loc>
+      <image:title>Matching Outfits Trip — Wearing Ayesha's De Gallery — Dear Ekra</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mydearekra.pages.dev/thumbnails/chilekotha_lamp.webp</image:loc>
+      <image:title>A New Touch to My Room — Lamp from ChileKotha — Dear Ekra</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mydearekra.pages.dev/thumbnails/basecamp.webp</image:loc>
+      <image:title>From Unexpected Adventures to Unforgettable Memories: Basecamp Tour — Dear Ekra</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mydearekra.pages.dev/thumbnails/sylhet_tour.webp</image:loc>
+      <image:title>Rainy Weather &amp; Lush Tea Gardens: Sylhet Travel Diary — Dear Ekra</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mydearekra.pages.dev/thumbnails/dabirulia.webp</image:loc>
+      <image:title>Sometimes, All You Need Is a Little Getaway — Da Birulia, Savar — Dear Ekra</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mydearekra.pages.dev/thumbnails/srabondhara.webp</image:loc>
+      <image:title>Spending a Day at Srabondhara Bungalow, Sreemangal — Dear Ekra</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mydearekra.pages.dev/thumbnails/banabithi.webp</image:loc>
+      <image:title>Exploring Banabithi Eco Resort, Sreemangal — Dear Ekra</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mydearekra.pages.dev/thumbnails/campus_commute.webp</image:loc>
+      <image:title>POV: I Live 2 Hours Away From University (#universitylife) — Dear Ekra</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mydearekra.pages.dev/thumbnails/echo_app.webp</image:loc>
+      <image:title>Safe Student Commutes: Echo Carpooling &amp; Travel Partner App — Dear Ekra</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mydearekra.pages.dev/thumbnails/dentflix.webp</image:loc>
+      <image:title>Affordable Modern Dental Care &amp; Exclusive 'Dear Ekra' 10% Discount — Dear Ekra</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mydearekra.pages.dev/thumbnails/ewu_random_vlog.webp</image:loc>
+      <image:title>Random Vlog — EWU Days — Dear Ekra</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mydearekra.pages.dev/thumbnails/ewu_smile_fair.webp</image:loc>
+      <image:title>Winter Smile Fair 9.0 at East West University — Dear Ekra</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mydearekra.pages.dev/thumbnails/dabirulia_villa.webp</image:loc>
+      <image:title>Why Does a Villa Cost 60 Thousand Taka? — Da Birulia, Savar — Dear Ekra</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mydearekra.pages.dev/thumbnails/dabirulia_bali.webp</image:loc>
+      <image:title>A Bali Experience for Just ৳10,000 — Da Birulia, Savar — Dear Ekra</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mydearekra.pages.dev/thumbnails/dabirulia_poem.webp</image:loc>
+      <image:title>Fire Esho — Poetry at Da Birulia, Savar</image:title>
+    </image:image>
   </url>
 </urlset>

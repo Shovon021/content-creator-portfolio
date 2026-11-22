@@ -345,7 +345,7 @@ export default function Hero({ onOpenCollab, activeLookIndex = 0, onSelectLookIn
                           <source srcSet={look.image} type="image/webp" />
                           <img
                             src={look.imageFallback || look.image}
-                            alt={`Dear Ekra - ${look.title}`}
+                            alt={`Rukaiya Binta Hossain Ekra (Dear Ekra) — ${look.title}`}
                             className="max-h-[330px] sm:max-h-[420px] lg:max-h-[490px] xl:max-h-[530px] w-auto max-w-[96%] object-contain object-bottom filter drop-shadow-[0_16px_32px_rgba(0,0,0,0.18)]"
                             loading={idx === 0 ? "eager" : "lazy"}
                             fetchPriority={idx === 0 ? "high" : "low"}
