@@ -151,6 +151,28 @@
     aspect: "vertical"
   },
 
+  {
+    id: "proj-glowtouch",
+    brand: "Glow Touch",
+    brandLogo: "/logos/glow_touch_logo.webp",
+    viewCount: "203",
+    location: "Panthapath, Dhaka",
+    category: "beauty",
+    categoryLabel: "Beauty & Skincare PR",
+    title: "Pamper Yourself at Glow Touch — Panthapath, Dhaka",
+    deliverable: "1x Salon Experience Reel",
+    headline: "Salon pampering at Glow Touch, Panthapath — 10% off with code 'Dear Ekra'.",
+    story: "Salon experience reel from Glow Touch, Panthapath: \"Panthapath girlies, what are you waiting for? Just head over to Glow Touch and treat yourself to some well-deserved pampering!\"",
+    impact: "গ্লো টাচ স্যালনের প্যাম্পারিং অভিজ্ঞতা নিয়ে তৈরি এই রিলটি স্যালনটির প্রমোশনের জন্য প্রকাশ করা হয়েছে।",
+    featured: false,
+    videoThumbnail: "/thumbnails/glow_touch.webp",
+    videoUrl: "https://www.facebook.com/reel/2422267231852682",
+    shareSlug: "glow-touch",
+    date: "Salon Collab",
+    hasAudioTrack: true,
+    duration: 183,
+    aspect: "vertical"
+  },
   // 2. Food, Cafes & Dining
   {
     id: "proj-cozycafe",
@@ -919,7 +941,8 @@ export const clientLogos = [
   { id: 20, name: "Dentflix Dentistry", logo: "/logos/logo19.webp", type: "Modern Dental Care" },
   { id: 21, name: "Rice & Noodle Uttara", logo: "/logos/rice_noodle_logo.webp", type: "Restaurant & Dining" },
   { id: 22, name: "ChileKotha", logo: "/logos/chilekotha_logo.webp", type: "Home Decor & Lighting" },
-  { id: 23, name: "Da Birulia", logo: "/logos/dabirulia_logo.webp", type: "Resort & Villa Stay" }
+  { id: 23, name: "Da Birulia", logo: "/logos/dabirulia_logo.webp", type: "Resort & Villa Stay" },
+  { id: 24, name: "Glow Touch", logo: "/logos/glow_touch_logo.webp", type: "Salon & Aesthetic Center" }
 ];
 
 export const statsTicker = [
