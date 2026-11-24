@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Dear Ekra — sitemap.xml WITH image entries (DRAFT prepared 2026-11-21, extended to 37 entries 2026-11-22 with villa+Bali real thumbnails, not yet live).
+<!-- Dear Ekra — sitemap.xml with image entries (live since 2026-11-22; 38 entries, lastmod updated 2026-11-24).
      Single-page site: all images belong to the homepage URL.
-     Image titles are the exact card/look titles from src/data/portfolioData.js.
-     Daily job: replace public/sitemap.xml with this file, build, push, verify live. -->
+     Image titles are the exact card/look titles from src/data/portfolioData.js. -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://mydearekra.pages.dev/</loc>
-    <lastmod>2026-11-22</lastmod>
+    <lastmod>2026-11-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
