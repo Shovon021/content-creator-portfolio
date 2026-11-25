@@ -448,7 +448,7 @@ export default function InlineReelPlayer({ item, aspect = '4/5', onOpenTheater }
       {/* 2. Poster Image (Cover photo when idle) */}
       <img
         src={item.videoThumbnail || item.poster}
-        alt={item.posterAlt || item.title}
+        alt={`Rukaiya Binta Hossain Ekra (Dear Ekra) — ${item.posterAlt || item.title}`}
         loading="lazy"
         decoding="async"
         className={`absolute inset-0 w-full h-full object-cover z-0 transition-opacity duration-300 ${
