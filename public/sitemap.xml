@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Dear Ekra — sitemap.xml with image entries (live since 2026-11-22; 39 entries, lastmod updated 2026-11-26).
+<!-- Dear Ekra — sitemap.xml with image entries (live since 2026-11-22; 39 entries, lastmod updated 2026-11-27).
      Single-page site: all images belong to the homepage URL.
      Image titles are the exact card/look titles from src/data/portfolioData.js. -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://mydearekra.pages.dev/</loc>
-    <lastmod>2026-11-26</lastmod>
+    <lastmod>2026-11-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
